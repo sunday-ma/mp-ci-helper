@@ -1,0 +1,48 @@
+{
+  "name": "mp-ci-helper",
+  "version": "1.0.1",
+  "description": "微信小程序 CI 工具。",
+  "author": "",
+  "license": "MIT",
+  "keywords": [
+    "ci",
+    "miniprogram-ci",
+    "uniapp-ci",
+    "mp-weixin"
+  ],
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "bin": {
+    "mp-ci-helper": "lib/index.js"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development tsup",
+    "build": "cross-env NODE_ENV=production tsup",
+    "type-check": "tsc --noEmit",
+    "lint": "eslint src/",
+    "lint:fix": "eslint src/ --fix",
+    "test": "pnpm run build && pnpm run type-check && pnpm run lint"
+  },
+  "dependencies": {
+    "@bit2byte/nano-json": "^0.1.1",
+    "@clack/prompts": "^0.11.0",
+    "bundle-require": "^5.1.0",
+    "joycon": "^3.1.1",
+    "kleur": "^4.1.5",
+    "miniprogram-ci": "^2.1.26",
+    "semver": "^7.7.2",
+    "type-fest": "^4.41.0"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^3.7.3",
+    "@types/node": "^24.3.0",
+    "@types/semver": "^7.7.0",
+    "cross-env": "^10.0.0",
+    "eslint": "^9.33.0",
+    "tsup": "^8.5.0",
+    "typescript": "^5.9.2"
+  }
+}
