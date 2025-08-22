@@ -2,16 +2,12 @@
 
 微信小程序 CI 工具。
 
-## 安装
-
-`pnpm add mp-ci-helper -D`
-
-## 配置
+## 示例
 
 项目根目录创建配置文件：`mp-ci-helper.config.ts`
 
 ```ts
-import { MpCiConfig } from 'mp-ci-helper';
+import { MpCiConfig } from 'mp-ci-helper'
 
 // 详细配置项含义参考 https://www.npmjs.com/package/miniprogram-ci
 const config: MpCiConfig = {
@@ -34,9 +30,9 @@ const config: MpCiConfig = {
     },
     onProgressUpdate: console.log,
   },
-};
+}
 
-export default config;
+export default config
 ```
 
 ## 用法
