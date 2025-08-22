@@ -2,6 +2,10 @@
 
 微信小程序 CI 工具。
 
+## 安装
+
+`pnpm add mp-ci-helper -D`
+
 ## 示例
 
 项目根目录创建配置文件：`mp-ci-helper.config.ts`

@@ -2,7 +2,7 @@
   "name": "mp-ci-helper",
   "version": "1.0.1",
   "description": "微信小程序 CI 工具。",
-  "author": "",
+  "author": "levima",
   "license": "MIT",
   "keywords": [
     "ci",
