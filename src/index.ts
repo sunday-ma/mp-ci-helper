@@ -63,6 +63,7 @@ async function main() {
   await pkg.r()
 
   const prevVersion = pkg.d?.version ?? '0.0.0'
+  const message = pkg.d?.description ?? ''
 
   const commit = await p.group(
     {
@@ -85,8 +86,8 @@ async function main() {
       desc: () =>
         p.text({
           message: kleur.cyan('输入提交备注'),
-          placeholder: '',
-          initialValue: '',
+          placeholder: message,
+          initialValue: message,
         }),
     },
     {
@@ -103,13 +104,6 @@ async function main() {
     version: commit.version,
     desc: commit.desc,
     setting: {
-      es6: true,
-      es7: true,
-      minify: true,
-      minifyJS: true,
-      minifyWXML: true,
-      minifyWXSS: true,
-      autoPrefixWXSS: true,
       ...config.upload?.setting,
     },
     robot: config.upload?.robot,
