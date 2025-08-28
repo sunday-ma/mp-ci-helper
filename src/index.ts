@@ -40,6 +40,7 @@ async function main() {
   })
   const { mod } = await bundleRequire({
     filepath: configPath ?? '',
+    preserveTemporaryFile: false, // 明确设置不保留临时文件
   })
 
   const config: MpCiConfig = mod.default
